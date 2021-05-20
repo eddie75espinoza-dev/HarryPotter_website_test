@@ -1,0 +1,151 @@
+/*  PALLETTE  */
+/* CSS HEX */
+:root{
+--black: #000100;
+--bg: #2c363f;
+--lemon-curry: #d3a625;
+--orange-yellow: #eeba30;
+--rufous: #ae0001;
+--barn-red: #740001;
+--text-font: #fff;
+
+/* CSS HSL */
+--black: hsla(120, 100%, 0%, 1);
+--lemon-curry: hsla(44, 70%, 49%, 1);
+--orange-yellow: hsla(44, 85%, 56%, 1);
+--rufous: hsla(360, 100%, 34%, 1);
+--barn-red: hsla(359, 100%, 23%, 1);
+
+}
+/*  BODY  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+body{
+    background: url(../img/hogwarts_castle.jpg); 
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-attachment: fixed;
+    background-color: #003554;
+}
+.empty{
+    width: 100%;
+    height: 180px;
+}
+.center-title, .btn-audio {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+}
+.center-title img{
+    width: clamp(40%, 8vh, 60%);
+}
+.text-title{
+    text-align: center;
+    font-size: clamp(0.8rem, 8vh, 2.5rem);
+    font-family:fantasy;
+    color: var(--text-font);
+    letter-spacing: 0.3rem;  
+}
+.container{
+    width: 100%;
+    height: 450px;   
+}
+.card-group{
+    margin: 1rem;
+    justify-content: center;
+    display: grid; 
+    flex-direction: column;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 420px));
+}
+.card{
+    border: solid 0.2rem var(--orange-yellow);
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: var(--bg);
+}
+.card-title{
+    padding-bottom: 2rem;
+    font-size: 1.8rem;
+    font-family: fantasy;
+    color:var(--lemon-curry);
+    letter-spacing: 0.2rem;
+}
+.card-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-img img{
+    height: 150px;
+}
+.card-text{
+    padding-top: 1rem;
+    text-align:justify;
+    color: var(--orange-yellow);
+}
+/* .btn-audio{
+    display: none;
+} */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.footer-group{
+    color:var(--text-font);
+    font-size: clamp(1rem, 4vh, 1.2rem);
+}
+@media (max-width: 1023px) {
+    body{
+        background: url(../img/hogwarts_castle_1200.png) no-repeat;
+        background-attachment: fixed;
+        background-size: 100vw;
+        background-color: #003554;
+    }
+    .container{
+        height: 300px;
+    }
+}
+@media (max-width: 767px) {
+    body{
+        background: url(../img/hogwarts_castle_600.png) no-repeat;
+        background-attachment: fixed;
+        background-size: 100vw;
+        background-color: #003554;
+    }
+    .empty{
+        height: 200px;
+    }
+    .container{
+        height: 500px;
+    }
+    .center-title{
+        display: grid;
+    }
+    .center-title img{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }    
+}
+@media (max-width: 320px) {
+    body{
+        background: url(../img/hogwarts_castle_600.png) no-repeat;
+        background-attachment: fixed;
+        background-size: 100vw;
+        background-color: #003554;
+    }
+    .empty{
+        height: 180px;
+    }
+    .container{
+        height: 300px;
+    }
+}
